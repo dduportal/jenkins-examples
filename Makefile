@@ -1,7 +1,7 @@
 
 all: jenkins
 
-cluster:
+cluster: docker-image.tar
 	@$(call check_req,k3d)
 ## Create cluster if it does not already exist
 	@if k3d cluster list  --no-headers | grep -q '^$(CLUSTER_NAME) '; then k3d cluster start jenkins; else \
@@ -17,6 +17,7 @@ jenkins: cluster
 	@helmfile apply
 
 clean: clean-jenkins clean-cluster
+	rm -f ./docker-image.tar
 
 clean-jenkins:
 	@$(call check_req,helmfile)
@@ -27,7 +28,6 @@ clean-cluster:
 	@k3d cluster delete $(CLUSTER_NAME)
 	@echo "== The k3d cluster named '$(CLUSTER_NAME)' does not exist anymore.."
 
-# plugins.txt management
 docker:
 	@docker build --tag=$(DOCKER_IMAGE_NAME) ./docker/
 
@@ -40,7 +40,7 @@ docker-load: docker-image.tar cluster
 plugins: docker
 	@bash ./docker/plugins.sh $(DOCKER_IMAGE_NAME)
 
-.PHONY: all cluster clean jenkins clean-jenkins clean-cluster plugins docker
+.PHONY: all cluster clean jenkins clean-jenkins clean-cluster plugins docker docker-load
 
 ## Common variables
 CLUSTER_NAME ?= jenkins

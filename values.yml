@@ -1,6 +1,7 @@
 ---
 controller:
-  tag: "2.263.1"
+  image: "dduportal/jenkins-k8s"
+  tag: "latest"
   ingress:
     enabled: true
     hostName: localhost

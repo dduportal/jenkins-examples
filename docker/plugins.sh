@@ -87,5 +87,9 @@ wait_for_jenkins_available
 
 echo "== Exporting the new plugins list..."
 get_jenkins_plugins_list "${JENKINS_URL}" | tee "${PLUGINS_TXT_FILE}"
+
+echo "== Cleaning up..."
+docker rm -v -f "${JENKINS_CONTAINER_NAME}" >/dev/null 2>&1 || true
+
 echo "== Updated plugin list is available at ${PLUGINS_TXT_FILE}. End of Script"
 exit 0
