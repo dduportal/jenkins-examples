@@ -1,0 +1,12 @@
+---
+repositories:
+  - name: jenkins
+    url: https://charts.jenkins.io
+releases:
+  - name: jenkins
+    chart: jenkins/jenkins
+    version: 3.0.12
+    namespace: jenkins
+    values:
+      - "values.yml"
+...

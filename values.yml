@@ -1,0 +1,30 @@
+---
+controller:
+  tag: "2.263.1"
+  ingress:
+    enabled: true
+    hostName: localhost
+  JCasC:
+    enabled: true
+    defaultConfig: false
+    configScripts:
+      securityRealm: |-
+        local:
+          allowsSignup: false
+          enableCaptcha: false
+          users:
+          - id: "butler"
+            name: "Jenkins Admin"
+            password: "butler"
+      authorizationStrategy: |-
+        loggedInUsersCanDoAnything:
+          allowAnonymousRead: false
+  ## Autoreload Jenkins when a change is done in Casc.
+  # Note that it requires top-level rbac to be enabled
+  sidecars:
+    configAutoReload:
+      enabled: true
+## Required to enable sidecar's configAutoReload
+rbac:
+  create: true
+...
