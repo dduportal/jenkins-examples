@@ -1,4 +1,5 @@
 ace-editor:1.1
+ansicolor:0.7.3
 apache-httpcomponents-client-4-api:4.5.10-2.0
 authentication-tokens:1.4
 blueocean-autofavorite:1.2.4
@@ -52,6 +53,7 @@ jackson2-api:2.12.0
 jdk-tool:1.4
 jenkins-design-language:1.24.3
 jira:3.1.3
+job-dsl:1.77
 jquery3-api:3.5.1-2
 jsch:0.1.55.2
 junit:1.48

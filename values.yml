@@ -1,9 +1,11 @@
 ---
 rbac:
   create: true
+  readSecrets: true # Required to allow the plugin kubernetes-credentials-provider to read Kubernetes secrets
 controller:
   image: "dduportal/jenkins-k8s"
   tag: "latest"
+  imagePullPolicy: "IfNotPresent" # Avoid Always if you use an image built locally and loaded in k3d from the local cache
   jenkinsUrl: http://localhost
   jenkinsAdminEmail: noreply@localhost.local
   installPlugins: []
