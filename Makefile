@@ -21,7 +21,9 @@ clean: clean-jenkins clean-cluster
 
 clean-jenkins:
 	@$(call check_req,helmfile)
+	@$(call check_req,kubectl)
 	@helmfile destroy
+	@kubectl delete namespace jenkins
 
 clean-cluster:
 	@$(call check_req,k3d)
