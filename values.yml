@@ -29,5 +29,46 @@ controller:
     authorizationStrategy: |-
       loggedInUsersCanDoAnything:
         allowAnonymousRead: false
+    configScripts:
+      pipeline-library: |
+        unclassified:
+          globalLibraries:
+            libraries:
+              - defaultVersion: "master"
+                implicit: true
+                name: "pipeline-library"
+                retriever:
+                  modernSCM:
+                    scm:
+                      git:
+                        id: "github-access-token"
+                        remote: "https://github.com/jenkins-infra/pipeline-library.git"
 
+      jobs: |
+        jobs:
+          - script: >
+              multibranchPipelineJob('docker-builder') {
+                displayName "docker-builder"
+                branchSources {
+                  github {
+                    id('2020120401')
+                    repoOwner('dduportal')
+                    repository('docker-builder')
+                    buildForkPRHead(true)
+                    buildForkPRMerge(true)
+                    buildOriginBranch(true)
+                  }
+                }
+                factory {
+                  workflowBranchProjectFactory {
+                    scriptPath('Jenkinsfile_k8s')
+                  }
+                }
+                // don't keep build jobs for deleted branches
+                orphanedItemStrategy {
+                  discardOldItems {
+                    numToKeep(-1)
+                  }
+                }
+              }
 ...

@@ -8,7 +8,6 @@ cluster: docker-image.tar
 		k3d cluster create \
 		--port="80:80@loadbalancer" \
 		--port="443:443@loadbalancer" \
-		--agents=2 \
 		$(CLUSTER_NAME); fi;
 	@echo "== The k3d cluster named '$(CLUSTER_NAME)' is ready."
 

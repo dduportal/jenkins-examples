@@ -1,0 +1,19 @@
+= Read Me
+
+* Requirements:
+** GNU `make`
+** Docker
+** `k3d`
+
+* Build the Jenkins controller image with `make docker`
+** If you want, you can upgrade re-generate the file `plugins.txt` file of this Docker image with `make plugins`
+
+* Create a local cluster with `make cluster`
+** If you want to use the local Docker image of the Jenkins controller, use the command `make docker-load` to add the image from your docker enginee into the cluster
+
+* Deploy the Jenkins Controller with `make jenkins`
+
+* Cleanup with one of these commands:
+** Jenkins deploymenent: `make clean-jenkins`
+** k3d cluster: `make clean-cluster`
+** Everything: `make clean`
