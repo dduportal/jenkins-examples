@@ -46,28 +46,79 @@ controller:
 
       jobs: |
         jobs:
-          - script: >
-              multibranchPipelineJob('docker-builder') {
-                displayName "docker-builder"
-                branchSources {
+           - script: >
+              organizationFolder('Docker Builds') {
+                description('Docker Builds')
+                displayName('Docker Builds')
+                organizations {
                   github {
-                    id('2020120401')
-                    repoOwner('dduportal')
-                    repository('docker-builder')
-                    buildForkPRHead(true)
-                    buildForkPRMerge(true)
-                    buildOriginBranch(true)
+                    repoOwner("jenkins-infra")
+                    apiUri("https://api.github.com")
+                    // credentialsId('github-access-token')
+
+                    traits {
+                      gitHubTagDiscovery()
+                      cloneOptionTrait {
+                        extension {
+                          shallow(false)
+                          noTags(false)
+                          reference('')
+                          timeout(10)
+                          honorRefspec(true)
+                        }
+                      }
+                    }
                   }
                 }
-                factory {
-                  workflowBranchProjectFactory {
+
+                orphanedItemStrategy {
+                  discardOldItems {
+                    daysToKeep(7)
+                    numToKeep(10)
+                  }
+                }
+
+                projectFactories {
+                  workflowMultiBranchProjectFactory {
                     scriptPath('Jenkinsfile_k8s')
                   }
                 }
-                // don't keep build jobs for deleted branches
-                orphanedItemStrategy {
-                  discardOldItems {
-                    numToKeep(-1)
+
+                buildStrategies {
+                  buildAnyBranches {
+                    strategies {
+                      buildChangeRequests {
+                        ignoreTargetOnlyChanges(false)
+                        ignoreUntrustedChanges(false)
+                      }
+                      buildRegularBranches()
+                      buildTags {
+                        atLeastDays("0")
+                        atMostDays("7")
+                      }
+                    }
+                  }
+                }
+
+                configure { node ->
+                  def traits = node / navigators / 'org.jenkinsci.plugins.github__branch__source.GitHubSCMNavigator' / traits
+                  traits << 'jenkins.scm.impl.trait.RegexSCMSourceFilterTrait' {
+                    regex('docker-.*')
+                  }
+                  traits << 'org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait' {
+                    strategyId(1)
+                  }
+                  traits << 'org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait' {
+                    strategyId(1)
+                  }
+                  traits << 'org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait' {
+                    strategyId(1)
+                    trust(class: 'org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission')
+                  }
+                  traits << 'org.jenkinsci.plugins.github__branch__source.ExcludeArchivedRepositoriesTrait' {
+                  }
+                  traits << 'org.jenkinsci.plugins.github.label.filter.PullRequestLabelsBlackListFilterTrait' {
+                    labels('on-hold ci-skip')
                   }
                 }
               }
