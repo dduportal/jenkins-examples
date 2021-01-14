@@ -38,8 +38,9 @@ docker-image.tar: | docker
 docker-load: docker-image.tar cluster
 	@k3d image import --cluster=jenkins ./docker-image.tar
 
+UPGRADE_PLUGINS ?= false
 plugins: docker
-	@bash ./docker/plugins.sh $(DOCKER_IMAGE_NAME)
+	@bash ./docker/plugins.sh $(DOCKER_IMAGE_NAME) $(UPGRADE_PLUGINS)
 
 .PHONY: all cluster clean jenkins clean-jenkins clean-cluster plugins docker docker-load
 

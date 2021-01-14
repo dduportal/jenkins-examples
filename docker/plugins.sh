@@ -76,9 +76,10 @@ echo "== Jenkins container ${JENKINS_CONTAINER_NAME} is now reachable."
 if [ "${UPGRADE_PLUGINS}" == "true" ]
 then
     echo "== Upgrading plugins in the temporary Jenkins Controller..."
-    curl -s -L http://updates.jenkins-ci.org/update-center.json \
-        | sed '1d;$d' \
-        | curl -s -X POST -H 'Accept: application/json' -d @- "${JENKINS_URL}"/updateCenter/byId/default/postBack
+    get_jenkins_plugins_list "${JENKINS_URL}" | cut -d':' -f1 > "${PLUGINS_TXT_FILE}.current"
+    docker cp "${PLUGINS_TXT_FILE}.current" "${JENKINS_CONTAINER_NAME}":/tmp/plugins.current.txt
+    docker exec "${JENKINS_CONTAINER_NAME}" jenkins-plugin-cli --plugin-file=/tmp/plugins.current.txt
+    docker restart "${JENKINS_CONTAINER_NAME}"
 fi
 
 echo "== Restarting Jenkins Controller..."
