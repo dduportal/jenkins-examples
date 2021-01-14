@@ -1,7 +1,7 @@
 
 all: jenkins
 
-cluster: docker-image.tar
+cluster:
 	@$(call check_req,k3d)
 ## Create cluster if it does not already exist
 	@if k3d cluster list  --no-headers | grep -q '^$(CLUSTER_NAME) '; then k3d cluster start jenkins; else \
