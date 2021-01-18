@@ -88,8 +88,8 @@ controller:
                   buildAnyBranches {
                     strategies {
                       buildChangeRequests {
-                        ignoreTargetOnlyChanges(false)
-                        ignoreUntrustedChanges(false)
+                        ignoreTargetOnlyChanges(true)
+                        ignoreUntrustedChanges(true)
                       }
                       buildRegularBranches()
                       buildTags {
