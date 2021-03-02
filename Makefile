@@ -1,5 +1,5 @@
 
-all: jenkins
+all: docker-load jenkins
 
 cluster:
 	@$(call check_req,k3d)
