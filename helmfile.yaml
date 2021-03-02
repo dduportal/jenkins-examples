@@ -5,7 +5,7 @@ repositories:
 releases:
   - name: jenkins
     chart: jenkins/jenkins
-    version: 3.0.12
+    version: 3.2.0
     namespace: jenkins
     values:
       - "values.yml"
