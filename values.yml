@@ -43,68 +43,26 @@ controller:
                       git:
                         id: "github-access-token"
                         remote: "https://github.com/jenkins-infra/pipeline-library.git"
-
       jobs: |
         jobs:
            - script: >
-              organizationFolder('Docker Builds') {
-                description('Docker Builds')
-                displayName('Docker Builds')
-                organizations {
+              multibranchPipelineJob('test') {
+                displayName "test"
+                description "Test Multibranch"
+                branchSources {
                   github {
-                    repoOwner("jenkins-infra")
-                    apiUri("https://api.github.com")
-                    // credentialsId('github-access-token')
-
-                    traits {
-                      gitHubTagDiscovery()
-                      cloneOptionTrait {
-                        extension {
-                          shallow(false)
-                          noTags(false)
-                          reference('')
-                          timeout(10)
-                          honorRefspec(true)
-                        }
-                      }
-                    }
+                    id('20200302')
+                    repoOwner('dduportal')
+                    repository('aws')
                   }
                 }
-
-                orphanedItemStrategy {
-                  discardOldItems {
-                    daysToKeep(7)
-                    numToKeep(10)
-                  }
-                }
-
-                projectFactories {
-                  workflowMultiBranchProjectFactory {
+                factory {
+                  workflowBranchProjectFactory {
                     scriptPath('Jenkinsfile_k8s')
                   }
                 }
-
-                buildStrategies {
-                  buildAnyBranches {
-                    strategies {
-                      buildChangeRequests {
-                        ignoreTargetOnlyChanges(true)
-                        ignoreUntrustedChanges(true)
-                      }
-                      buildRegularBranches()
-                      buildTags {
-                        atLeastDays("0")
-                        atMostDays("7")
-                      }
-                    }
-                  }
-                }
-
                 configure { node ->
-                  def traits = node / navigators / 'org.jenkinsci.plugins.github__branch__source.GitHubSCMNavigator' / traits
-                  traits << 'jenkins.scm.impl.trait.RegexSCMSourceFilterTrait' {
-                    regex('docker-.*')
-                  }
+                  def traits = node / 'sources' / 'data' / 'jenkins.branch.BranchSource' / 'source' / 'traits'
                   traits << 'org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait' {
                     strategyId(1)
                   }
