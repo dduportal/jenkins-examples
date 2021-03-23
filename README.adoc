@@ -17,3 +17,12 @@
 ** Jenkins deploymenent: `make clean-jenkins`
 ** k3d cluster: `make clean-cluster`
 ** Everything: `make clean`
+
+
+== Update Jenkins Plugins
+
+The Docker image for the Jenkins controller uses a set of plugins defined with fixed versions in `docker/plugins.txt`.
+
+If you want to update these plugins, execute the following script with Docker available: `./docker/update-plugins.sh`.
+
+Please note that the script uses the Jenkins image version defined in `./docker/Dockerfile`.
