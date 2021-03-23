@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.263.4
+FROM jenkins/jenkins:2.277.1-alpine
 
 ## Install custom plugins
 COPY ./plugins.txt /usr/share/jenkins/ref/plugins.txt
