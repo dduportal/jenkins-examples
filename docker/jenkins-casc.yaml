@@ -9,5 +9,16 @@ jenkins:
 unclassified:
   location:
     url: "http://localhost:8080/"
-  # timestamper:
-  #   allPipelines: true
+  openTelemetry:
+    authentication: "noAuthentication"
+    disabledResourceProviders: "io.opentelemetry.sdk.extension.resources.ProcessResourceProvider"
+    endpoint: "http://jaeger:4317"
+    exportOtelConfigurationAsEnvironmentVariables: false
+    ignoredSteps: "dir,echo,isUnix,pwd,properties"
+    observabilityBackends:
+    - jaeger:
+        jaegerBaseUrl: "http://localhost:16686"
+    serviceName: "jenkins"
+    serviceNamespace: "jenkins"
+  timestamper:
+    allPipelines: true
