@@ -1,0 +1,21 @@
+---
+repositories:
+  - name: jenkins
+    url: https://charts.jenkins.io
+  - name: jenkins-infra
+    url: https://jenkins-infra.github.io/helm-charts
+releases:
+  - name: jenkins-jobs
+    namespace: jenkins-infra
+    chart: jenkins-infra/jenkins-jobs
+    version: 0.3.2
+    values:
+      - "values-jobs.yaml"
+  - name: jenkins-infra
+    chart: jenkins/jenkins
+    version: 4.1.8
+    namespace: jenkins-infra
+    values:
+      - "values.yml"
+    needs:
+      - jenkins-jobs # Required to generate the job definition in a configmap

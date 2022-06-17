@@ -1,0 +1,41 @@
+jenkinsName: jenkins-infra
+jobsDefinition:
+  docker-jobs:
+    name: Docker Jobs
+    description: Folder hosting all the Docker jobs
+    kind: folder
+    children:
+      jenkins-k8s:
+        name: Jenkins K8S
+        description: Multibranch test
+        repoOwner: dduportal
+        jenkinsfilePath: Jenkinsfile
+        credentials:
+          jenkins-dockerhub:
+            description: "Docker hub credential for jenkinsinfra organisation"
+            username: jenkinsinfraadmin
+            password: "${DOCKER_HUB_TOKEN_PUSH}"
+          vagrant_insecure_ssh_key:
+            description: "Vagrant SSH insecure private key"
+            username: vagrant
+            privateKey: "${GITHUB_APP_PRIVATE_KEY}"
+          githubapp-1:
+            description: "Github App example 1"
+            appId: "${GITHUB_APP_ID}"
+            privateKey: "${GITHUB_APP_PRIVATE_KEY}"
+          githubapp-2:
+            description: "Github App example 2"
+            appId: "56789"
+            owner: "jenkinsci"
+            privateKey: "${GITHUB_APP_PRIVATE_KEY}"
+      slides:
+        name: Slides
+        repoOwner: dduportal
+        jenkinsfilePath: Jenkinsfile
+        enableGitHubChecks: true
+        githubCheckName: RogerRoger
+        credentials:
+          vagrant_insecure_ssh_key:
+            description: "Vagrant SSH insecure private key"
+            username: vagrant
+            privateKey: "${GITHUB_APP_PRIVATE_KEY}"
