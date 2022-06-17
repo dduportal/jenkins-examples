@@ -1,0 +1,16 @@
+services:
+  jenkins:
+    build: ./
+    volumes:
+      - ./jenkins-casc.yaml:/var/jenkins_home/jenkins-casc.yaml:ro
+    environment:
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins-casc.yaml
+    ports:
+      - 8080:8080 # WebUI
+  jaeger:
+    image: jaegertracing/all-in-one:1.35
+    ports:
+      - 16686:16686 # Query WebUI
+    environment:
+      - "COLLECTOR_ZIPKIN_HOST_PORT=:9411"
+      - "COLLECTOR_OTLP_ENABLED=true"

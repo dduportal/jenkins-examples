@@ -1,0 +1,13 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "butler"
+  authorizationStrategy: loggedInUsersCanDoAnything
+unclassified:
+  location:
+    url: "http://localhost:8080/"
+  # timestamper:
+  #   allPipelines: true
