@@ -1,14 +1,4 @@
-jenkins:
-  securityRealm:
-    local:
-      allowsSignup: false
-      users:
-        - id: "admin"
-          password: "butler"
-  authorizationStrategy: loggedInUsersCanDoAnything
 unclassified:
-  location:
-    url: "http://localhost:8080/"
   openTelemetry:
     authentication: "noAuthentication"
     disabledResourceProviders: "io.opentelemetry.sdk.extension.resources.ProcessResourceProvider"
@@ -20,5 +10,3 @@ unclassified:
         jaegerBaseUrl: "http://localhost:16686"
     serviceName: "jenkins"
     serviceNamespace: "jenkins"
-  timestamper:
-    allPipelines: true

@@ -1,0 +1,14 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "butler"
+  authorizationStrategy: loggedInUsersCanDoAnything
+  numExecutors: 0
+unclassified:
+  location:
+    url: "${JENKINS_EXT_URL}"
+  timestamper:
+    allPipelines: true

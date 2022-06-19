@@ -2,11 +2,20 @@ services:
   jenkins:
     build: ./
     volumes:
-      - ./jenkins-casc.yaml:/var/jenkins_home/jenkins-casc.yaml:ro
+      # Mount JCasc files in a directory pointed by the env var "$CASC_JENKINS_CONFIG"
+      - ./casc.d:/var/jenkins_home/casc.d:ro
+      # Mounting the ssh private key as "container secret" makes it available in JCasc as the variable ${SSH_AGENT_KEY}
+      - ./secrets/id_jenkins.pem:/run/secrets/SSH_AGENT_KEY:ro
     environment:
-      - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins-casc.yaml
+      - "CASC_JENKINS_CONFIG=/var/jenkins_home/casc.d/"
+      - "JENKINS_EXT_URL=http://localhost:8080/" # Tune this if you use another external hostname
     ports:
       - 8080:8080 # WebUI
+  jenkins-agent:
+    image: jenkins/ssh-agent:jdk11
+    environment:
+      # This is a public key. The associated private key must be mounted in the Jenkins controller container.
+      - "JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORe0Mi78bQ+8G3pVS4pv5VDilqHVNIhfj+UxvVD100c noone@localhost.local"
   jaeger:
     image: jaegertracing/all-in-one:1.35
     ports:
