@@ -1,0 +1,41 @@
+name: Build, Test and Release the Docker Image
+
+on:
+  # On each branch/commit
+  push:
+    paths:
+      - 'docker-image/**'
+      - '.github/workflows/docker-image.yaml'
+  # On each pull request
+  pull_request:
+  # Manually
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Allow push to GHCR registry
+    # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio
+    permissions:
+      packages: write
+      contents: read
+    env:
+      IMAGE_NAME: "ghcr.io/${{ github.repository_owner }}/jenkins-example:${GITHUB_SHA}"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
+        run: 'docker build --file Dockerfile --tag ${IMAGE_NAME} --label "gha_run_number=${GITHUB_RUN_ID}" ./docker-image/'
+      # - name: Test
+      #   uses: brpaz/structure-tests-action@v1
+      #   with:
+      #     image: "${IMAGE_NAME}"
+      #     configFile: ./docker-image/cst-tests.yaml
+      - name: Push image
+        run: 'docker push $IMAGE_NAME'
