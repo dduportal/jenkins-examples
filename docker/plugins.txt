@@ -71,6 +71,7 @@ opentelemetry:2.8.0-rc1
 prometheus:2.0.11
 pipeline-build-step:2.18
 pipeline-graph-analysis:195.v5812d95a_a_2f9
+pipeline-groovy-lib:593.va_a_fc25d520e9
 pipeline-input-step:448.v37cea_9a_10a_70
 pipeline-milestone-step:101.vd572fef9d926
 pipeline-model-api:2.2097.v33db_b_de764b_e
@@ -96,10 +97,8 @@ token-macro:293.v283932a_0a_b_49
 trilead-api:1.57.v6e90e07157e1
 variant:1.4
 warnings-ng:9.13.0
-workflow-aggregator:581.v0c46fa_697ffd
 workflow-api:1164.v760c223ddb_32
 workflow-basic-steps:948.v2c72a_091b_b_68
-workflow-cps-global-lib:588.v576c103a_ff86
 workflow-cps:2725.v7b_c717eb_12ce
 workflow-durable-task-step:1146.v1a_d2e603f929
 workflow-job:1186.v8def1a_5f3944

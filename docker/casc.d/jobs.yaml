@@ -1,4 +1,24 @@
-# jobs:
-#   - script: >
-#       pipelineJob('example-project') {
-#       }
+jobs:
+  - script: >
+      pipelineJob('project-A') {
+          definition {
+              cpsFlowDefinition {
+                  script('''
+                  node() {
+                    stage('Show CPU Informations') {
+                      echo 'Hello'
+                      sh 'cat /proc/cpuinfo'
+                    }
+                    stage('Wait 10 seconds') {
+                      sleep 10
+                    }
+                    stage('Show Linux Distribution Informations') {
+                      sh 'cat /etc/*release*'
+                      echo 'Bye'
+                      }
+                  }
+                  ''')
+                  sandbox(true)
+              }
+          }
+      }
