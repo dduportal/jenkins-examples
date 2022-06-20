@@ -1,6 +1,7 @@
 services:
   jenkins:
-    build: ./
+    build: ../docker-image/
+    restart: unless-stopped
     volumes:
       # Mount JCasc files in a directory pointed by the env var "$CASC_JENKINS_CONFIG"
       - ./casc.d:/var/jenkins_home/casc.d:ro
