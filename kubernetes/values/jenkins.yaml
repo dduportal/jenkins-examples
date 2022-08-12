@@ -4,7 +4,8 @@ rbac:
   readSecrets: true # Required to allow the plugin kubernetes-credentials-provider to read Kubernetes secrets
 controller:
   image: dduportal/jenkins-k8s
-  # tag: 0.61.0-2.354
+  tag: latest
+  imagePullPolicy: IfNotPresent
   resources:
     limits:
       cpu: "1"
