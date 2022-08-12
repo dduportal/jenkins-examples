@@ -30,13 +30,14 @@ clean-cluster:
 	@echo "== The k3d cluster named '$(CLUSTER_NAME)' does not exist anymore.."
 
 docker:
-	@docker build --tag=$(DOCKER_IMAGE_NAME) ./docker/
+	@docker build --tag=$(DOCKER_IMAGE_NAME) $(CURDIR)/../docker-image/
 
 docker-image.tar: | docker
 	@docker save $(DOCKER_IMAGE_NAME) --output=./docker-image.tar
 
 docker-load: docker-image.tar cluster
 	@k3d image import --cluster=jenkins ./docker-image.tar
+
 
 UPGRADE_PLUGINS ?= false
 plugins: docker

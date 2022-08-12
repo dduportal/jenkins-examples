@@ -3,6 +3,8 @@ rbac:
   create: true
   readSecrets: true # Required to allow the plugin kubernetes-credentials-provider to read Kubernetes secrets
 controller:
+  image: dduportal/jenkins-k8s
+  # tag: 0.61.0-2.354
   resources:
     limits:
       cpu: "1"
@@ -60,15 +62,3 @@ controller:
           quietPeriod: 0 # No need to wait between build scheduling
           disabledAdministrativeMonitors:
             - "jenkins.security.QueueItemAuthenticatorMonitor"
-      credentials: |
-        credentials:
-          system:
-            domainCredentials:
-              - credentials:
-                - gitHubApp:
-                    appID: "${GITHUB_APP_ID}"
-                    description: "GitHub App for infra.ci.jenkins.io"
-                    id: "github-app-infra"
-                    privateKey: "${GITHUB_APP_PRIVATE_KEY}"
-                    scope: GLOBAL
-                    owner: "dduportal"

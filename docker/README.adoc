@@ -1,0 +1,17 @@
+# Jenkins Example for Docker
+
+## Requirements
+
+* A Docker Engine with the capability "volume mount from local files" enabled
+** Docker Desktop recommended
+* Docker Compose v2+ installed in your command line's `PATH`
+
+## Quick Start
+
+
+* Execute the following command to start the stack:
++
+[source,shell]
+docker-compose up -d
+
+* After a few minutes, you can access Jenkins at the URL http://localhost:8080
