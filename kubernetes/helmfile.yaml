@@ -12,15 +12,15 @@ repositories:
     url: https://charts.bitnami.com/bitnami
 releases:
   # - name: jenkins-jobs
-  #   namespace: jenkins-infra
+  #   namespace: jenkins
   #   chart: jenkins-infra/jenkins-jobs
   #   version: 0.3.2
   #   values:
   #     - "values/jenkins-jobs.yaml"
-  - name: jenkins-infra
+  - name: jenkins
     chart: jenkins/jenkins
-    version: 4.1.16
-    namespace: jenkins-infra
+    version: 4.2.5
+    namespace: jenkins
     values:
       - "values/jenkins.yaml"
     # needs:
