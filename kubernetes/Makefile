@@ -13,6 +13,7 @@ cluster:
 
 jenkins: cluster
 	@$(call check_req,helmfile)
+	@helm diff --help > /dev/null 2>&1 || { echo "ERROR: You need to install the helm plugin 'diff'"; exit 1 ; }
 	@helmfile apply
 
 clean: clean-jenkins clean-cluster

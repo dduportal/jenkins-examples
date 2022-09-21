@@ -1,9 +1,14 @@
 = Read Me
 
-* Requirements:
-** GNU `make`
-** Docker
-** `k3d`
+==  Requirements
+
+* GNU `make`
+* Docker
+* `k3d`
+* `kubectl`
+* `helm` command line v2+ (https://helm.sh/)
+* The `helm` plugin `diff` (https://github.com/databus23/helm-diff#using-helm-plugin-manager--23x)
+* `helmfile` command line (https://helmfile.readthedocs.io/en/latest/)
 
 * Build the Jenkins controller image with `make docker`
 ** If you want, you can upgrade re-generate the file `plugins.txt` file of this Docker image with `make plugins`
