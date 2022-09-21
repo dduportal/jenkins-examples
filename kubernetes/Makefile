@@ -17,7 +17,6 @@ jenkins: cluster
 	@helmfile apply
 
 clean: clean-jenkins clean-cluster
-	rm -f ./docker-image.tar
 
 clean-jenkins:
 	@$(call check_req,helmfile)
@@ -33,18 +32,10 @@ clean-cluster:
 docker:
 	@docker build --tag=$(DOCKER_IMAGE_NAME) $(CURDIR)/../docker-image/
 
-docker-image.tar: | docker
-	@docker save $(DOCKER_IMAGE_NAME) --output=./docker-image.tar
+docker-load: docker cluster
+	@k3d image import --cluster=jenkins $(DOCKER_IMAGE_NAME)
 
-docker-load: docker-image.tar cluster
-	@k3d image import --cluster=jenkins ./docker-image.tar
-
-
-UPGRADE_PLUGINS ?= false
-plugins: docker
-	@bash ./docker/plugins.sh $(DOCKER_IMAGE_NAME) $(UPGRADE_PLUGINS)
-
-.PHONY: all cluster clean jenkins clean-jenkins clean-cluster plugins docker docker-load
+.PHONY: all cluster clean jenkins clean-jenkins clean-cluster docker docker-load
 
 ## Common variables
 CLUSTER_NAME ?= jenkins
