@@ -4,7 +4,7 @@
 
 * GNU `make`
 * Docker
-* `k3d`
+* `k3d` v5+ (v4 does not work with WSL)
 * `kubectl`
 * `helm` command line v2+ (https://helm.sh/)
 * The `helm` plugin `diff` (https://github.com/databus23/helm-diff#using-helm-plugin-manager--23x)
