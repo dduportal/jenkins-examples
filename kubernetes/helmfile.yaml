@@ -33,6 +33,12 @@ releases:
   #   values:
   #     - "values/jaeger.yaml"
 
+  - name: tempo
+    chart: grafana/tempo
+    namespace: tempo
+    values:
+      - "values/tempo.yaml"
+
   # adding grafana support issue #2
   - name: grafana
     chart: grafana/grafana
