@@ -10,8 +10,8 @@ repositories:
     url: https://helm.elastic.co
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
-  - name: tempo
-    url: https://github.com/grafana/helm-charts/
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
 releases:
   # - name: jenkins-jobs
   #   namespace: jenkins
