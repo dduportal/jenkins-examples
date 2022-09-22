@@ -10,6 +10,8 @@ repositories:
     url: https://helm.elastic.co
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
+  - name: tempo
+    url: https://github.com/grafana/helm-charts/
 releases:
   # - name: jenkins-jobs
   #   namespace: jenkins
@@ -30,3 +32,10 @@ releases:
   #   namespace: jaeger
   #   values:
   #     - "values/jaeger.yaml"
+
+  # adding tempo support issue #1
+  - name: tempo
+    chart: grafana/tempo
+    namespace: tempo
+    values:
+      - "values/tempo.yaml"
