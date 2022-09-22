@@ -39,7 +39,6 @@ releases:
     values:
       - "values/tempo.yaml"
 
-  # adding grafana support issue #2
   - name: grafana
     chart: grafana/grafana
     namespace: grafana
