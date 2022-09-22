@@ -11,7 +11,7 @@ repositories:
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
   - name: grafana
-    url: https://github.com/grafana/helm-charts/
+    url: https://grafana.github.io/helm-charts
 releases:
   # - name: jenkins-jobs
   #   namespace: jenkins
