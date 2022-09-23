@@ -1,3 +1,9 @@
+ingress:
+  enabled: true
+  path: /grafana
+  hosts:
+    - localhost
+
 env:
   GF_AUTH_ANONYMOUS_ENABLED: true
   GF_AUTH_ANONYMOUS_ORG_ROLE: 'Admin'
