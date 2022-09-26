@@ -27,11 +27,12 @@ releases:
       - "values/jenkins.yaml"
     # needs:
     #   - jenkins-jobs # Required to generate the job definition in a configmap
-  # - name: jaeger
-  #   chart: ./jaegertracing-helm-charts/charts/jaeger
-  #   namespace: jaeger
-  #   values:
-  #     - "values/jaeger.yaml"
+    
+  - name: jaeger
+    chart: jaegertracing/jaeger
+    namespace: jaeger
+    values:
+      - "values/jaeger.yaml"
 
   - name: tempo
     chart: grafana/tempo
