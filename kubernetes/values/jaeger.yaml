@@ -8,6 +8,8 @@ allInOne:
   enabled: true
   ingress: 
     enabled: false
+storage:
+  type: none
 agent:
   enabled: false
 collector:
