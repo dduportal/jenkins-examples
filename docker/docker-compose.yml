@@ -17,10 +17,26 @@ services:
     environment:
       # This is a public key. The associated private key must be mounted in the Jenkins controller container.
       - "JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORe0Mi78bQ+8G3pVS4pv5VDilqHVNIhfj+UxvVD100c noone@localhost.local"
-  jaeger:
-    image: jaegertracing/all-in-one:1.38
+
+  grafana:
+    image: grafana/grafana
     ports:
-      - 16686:16686 # Query WebUI
-    environment:
-      - "COLLECTOR_ZIPKIN_HOST_PORT=:9411"
-      - "COLLECTOR_OTLP_ENABLED=true"
+      - 3000:3000 # WebUI
+    volumes:
+      - ./conf/:/etc/grafana/provisioning/datasources:rw
+
+  loki:
+    image: grafana/loki:2.6.1
+    ports:
+      - 3100:3100
+    volumes: 
+      - ./conf/loki-config.yaml:/etc/loki/local-config.yaml:ro
+    command: -config.file=/etc/loki/local-config.yaml
+    
+  promtail:
+    image: grafana/promtail:2.6.1
+    volumes:
+      - /var/log:/vm/var/log:ro
+      - /var/lib/docker:/vm/var/lib/docker:ro
+      - ./conf/promtail-config.yaml:/etc/promtail/config.yml:ro
+    command: -config.file=/etc/promtail/config.yml
