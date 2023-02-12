@@ -32,10 +32,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: 'docker build --tag ${IMAGE_NAME} --label "gha_run_number=${GITHUB_RUN_ID}" ./docker-image/'
-      # - name: Test
-      #   uses: brpaz/structure-tests-action@v1
-      #   with:
-      #     image: "${IMAGE_NAME}"
-      #     configFile: ./docker-image/cst-tests.yaml
       - name: Push image
         run: 'docker push $IMAGE_NAME'
+        if: github.event_name != 'pull_request'
