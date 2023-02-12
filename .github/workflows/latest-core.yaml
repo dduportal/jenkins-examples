@@ -28,7 +28,7 @@ jobs:
           SUFFIX=jdk17
           FULL_VERSION=jenkins/jenkins:${{ steps.update.outputs.jenkins_version }}-${SUFFIX}
           echo $FULL_VERSION
-          sed -i 's|FROM .*|FROM '"${FULL_VERSION}"'|' Dockerfile
+          sed -i 's|FROM .*|FROM '"${FULL_VERSION}"'|' ./docker-image/Dockerfile
 
       - name: Calculate Diff
         id: diff
@@ -41,9 +41,12 @@ jobs:
             echo "::set-output name=changed::false"
           fi
 
-      - name: Update
-        if: ${{ steps.diff.outputs.changed == 'true' }}
-        uses: jenkins-infra/uc@0.1.4
+      # - name: Update
+      #   if: ${{ steps.diff.outputs.changed == 'true' }}
+      #   uses: jenkins-infra/uc@0.1.4
+      - run: ./bin/update-plugins.sh
+        id: update-plugins
+        name: Update plugins
 
       # - uses: tibdex/github-app-token@v1.6
       #   id: generate-token
