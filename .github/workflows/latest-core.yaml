@@ -1,0 +1,62 @@
+---
+name: latest-weekly
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v3
+
+      - name: Jenkins LTS version
+        id: update
+        uses: jenkins-infra/jenkins-version@0.3.1
+        with:
+          version-identifier: latest
+
+      - name: Process Version
+        id: process
+        run: |
+          SUFFIX=jdk17
+          FULL_VERSION=jenkins/jenkins:${{ steps.update.outputs.jenkins_version }}-${SUFFIX}
+          echo $FULL_VERSION
+          sed -i 's|FROM .*|FROM '"${FULL_VERSION}"'|' Dockerfile
+
+      - name: Calculate Diff
+        id: diff
+        run: |
+          git diff
+
+          if [[ $(git diff --stat) != '' ]]; then
+            echo "::set-output name=changed::true"
+          else
+            echo "::set-output name=changed::false"
+          fi
+
+      - name: Update
+        if: ${{ steps.diff.outputs.changed == 'true' }}
+        uses: jenkins-infra/uc@0.1.4
+
+      # - uses: tibdex/github-app-token@v1.6
+      #   id: generate-token
+      #   with:
+      #     app_id: ${{ secrets.JENKINS_ADMIN_APP_ID }}
+      #     private_key: ${{ secrets.JENKINS_ADMIN_APP_PRIVKEY }}
+      ## Use with ## ${{ steps.generate-token.outputs.token }}
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: 'feat(deps): bump jenkins weekly to ${{ steps.update.outputs.jenkins_version }}'
+          signoff: false
+          title: 'feat(deps): bump jenkins weekly to ${{ steps.update.outputs.jenkins_version }}'
+          branch: latest-weekly
+          token: ${{ secrets.GITHUB_TOKEN }}
