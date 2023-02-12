@@ -1,0 +1,44 @@
+---
+name: Check latest Jenkins plugins versions
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - run: ./bin/update-plugins.sh
+        id: update-plugins
+        name: Update plugins
+
+      # - uses: tibdex/github-app-token@v1.6
+      #   id: generate-token
+      #   with:
+      #     app_id: ${{ secrets.JENKINS_ADMIN_APP_ID }}
+      #     private_key: ${{ secrets.JENKINS_ADMIN_APP_PRIVKEY }}
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: 'chore(deps): update plugins'
+          signoff: false
+          title: 'chore(deps): update plugins'
+          author: jenkins-infra-updatecli[bot] <178728+jenkins-infra-updatecli[bot]@users.noreply.github.com>
+          committer: jenkins-infra-updatecli[bot] <178728+jenkins-infra-updatecli[bot]@users.noreply.github.com>
+          branch: update-plugins
+          token: ${{ secrets.GITHUB_TOKEN }}
