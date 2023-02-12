@@ -20,7 +20,7 @@ jobs:
         id: update
         uses: jenkins-infra/jenkins-version@0.3.1
         with:
-          version-identifier: latest
+          version-identifier: lts
 
       - name: Process Version
         id: process
