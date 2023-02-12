@@ -1,5 +1,5 @@
 ---
-name: latest-weekly
+name: Check latest Jenkins Core versions
 
 on:
   push:
