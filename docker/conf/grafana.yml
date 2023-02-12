@@ -3,3 +3,8 @@ datasources:
   acces: proxy
   type: loki
   url: http://loki:3100
+- name: tempo
+  acces: proxy
+  type: tempo
+  url: http://tempo:3200
+  isDefault: true
