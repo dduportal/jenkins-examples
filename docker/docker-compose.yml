@@ -42,10 +42,10 @@ services:
     command: -config.file=/etc/promtail/config.yml
       - ./conf/:/etc/grafana/provisioning/datasources
 
-  tempo:
-    image: grafana/tempo
-    ports:
-      - "3200:3200"   # tempo
-    volumes:
-      - ./conf/tempo.yaml:/etc/tempo.yaml
-    command: [ "-search.enabled=true", "-config.file=/etc/tempo.yaml" ]
+#  tempo:
+#    image: grafana/tempo
+#    ports:
+#      - "3200:3200"   # tempo
+#    volumes:
+#      - ./conf/tempo.yaml:/etc/tempo.yaml
+#    command: [ "-search.enabled=true", "-config.file=/etc/tempo.yaml" ]
