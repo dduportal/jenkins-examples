@@ -1,21 +1,30 @@
+grafana.ini:
+  server:
+    domain: localhost
+    root_url: "%(protocol)s://%(domain)s/grafana"
+    serve_from_sub_path: true
+
+ingress:
+  enabled: true
+  path: /grafana
+  hosts:
+    - localhost
+
 env:
   GF_AUTH_ANONYMOUS_ENABLED: true
   GF_AUTH_ANONYMOUS_ORG_ROLE: 'Admin'
   GF_AUTH_DISABLE_LOGIN_FORM: true
 
-# datasources:
-#   datasources.yaml:
-#     apiVersion: 1
-
-#     datasources:
-#       - name: Tempo
-#         type: tempo
-#         access: proxy
-#         orgId: 1
-#         url: http://tempo:3100
-#         basicAuth: false
-#         isDefault: true
-#         version: 1
-#         editable: false
-#         apiVersion: 1
-#         uid: tempo
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Jaeger
+      type: jaeger
+      org_id: 1
+      url: http://jaeger-collector.jaeger:16686/jaeger
+      isDefault: true
+    - name: Tempo
+      type: tempo
+      org_id: 2
+      url: http://tempo.tempo:3100
