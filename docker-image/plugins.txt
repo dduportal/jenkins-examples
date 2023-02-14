@@ -67,7 +67,7 @@ mercurial:1260.vdfb_723cdcc81
 metrics:4.2.13-420.vea_2f17932dd6
 momentjs:1.1.1
 node-iterator-api:49.v58a_8b_35f8363
-okhttp-api:4.9.3-108.v0feda04578cf
+okhttp-api:4.10.0-117.vf786fdfa_22c0
 opentelemetry:2.11.0
 pipeline-build-step:2.18
 pipeline-graph-analysis:202.va_d268e64deb_3
