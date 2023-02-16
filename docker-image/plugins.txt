@@ -58,8 +58,8 @@ jjwt-api:0.11.5-77.v646c772fddb_0
 job-dsl:1.81
 jquery3-api:3.6.1-2
 jsch:0.1.55.61.va_e9ee26616e7
-junit:1166.va_436e268e972
-kubernetes:3852.v41ea_166a_ed1b_
+junit:1177.v90374a_ef4d09
+kubernetes:3872.v760b_4a_6c126b_
 lockable-resources:1123.v4002ee23c671
 mailer:448.v5b_97805e3767
 matrix-project:785.v06b_7f47b_c631
@@ -69,7 +69,7 @@ momentjs:1.1.1
 node-iterator-api:49.v58a_8b_35f8363
 okhttp-api:4.10.0-117.vf786fdfa_22c0
 opentelemetry:2.11.0
-pipeline-build-step:2.18
+pipeline-build-step:2.18.1
 pipeline-graph-analysis:202.va_d268e64deb_3
 pipeline-groovy-lib:629.vb_5627b_ee2104
 pipeline-input-step:466.v6d0a_5df34f81
