@@ -34,11 +34,11 @@ releases:
     values:
       - "values/jaeger.yaml"
 
-  - name: tempo
-    chart: grafana/tempo
-    namespace: tempo
-    values:
-      - "values/tempo.yaml"
+#  - name: tempo
+#    chart: grafana/tempo
+#    namespace: tempo
+#    values:
+#      - "values/tempo.yaml"
 
   - name: grafana
     chart: grafana/grafana
