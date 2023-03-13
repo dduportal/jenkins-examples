@@ -3,7 +3,7 @@ name: Check latest Jenkins plugins versions
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: '0 0 * * 0'
   workflow_dispatch:
   push:
     branches:
