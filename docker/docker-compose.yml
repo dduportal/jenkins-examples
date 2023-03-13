@@ -29,10 +29,10 @@ services:
     image: grafana/loki:2.6.1
     ports:
       - 3100:3100
-    volumes: 
+    volumes:
       - ./conf/loki-config.yaml:/etc/loki/local-config.yaml:ro
     command: -config.file=/etc/loki/local-config.yaml
-    
+
   promtail:
     image: grafana/promtail:2.6.1
     volumes:
@@ -40,3 +40,11 @@ services:
       - /var/lib/docker:/vm/var/lib/docker:ro
       - ./conf/promtail-config.yaml:/etc/promtail/config.yml:ro
     command: -config.file=/etc/promtail/config.yml
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.42
+    ports:
+      - 16686:16686 # Query WebUI
+    environment:
+      - "COLLECTOR_ZIPKIN_HOST_PORT=:9411"
+      - "COLLECTOR_OTLP_ENABLED=true"
