@@ -12,6 +12,6 @@
 * Execute the following command to start the stack:
 +
 [source,shell]
-docker-compose up -d
+docker compose up -d
 
 * After a few minutes, you can access Jenkins at the URL http://localhost:8080
