@@ -44,7 +44,7 @@ git-client:4.4.0
 git-server:99.va_0826a_b_cdfa_d
 git:5.1.0
 github-api:1.314-431.v78d72a_3fe4c3
-github-branch-source:1725.vd391eef681a_e
+github-branch-source:1728.v859147241f49
 github:1.37.1
 handy-uri-templates-2-api:2.1.8-22.v77d5b_75e6953
 htmlpublisher:1.31
