@@ -1,29 +1,38 @@
 #!/usr/bin/env bash
 # From https://github.com/jenkins-infra/docker-jenkins-weekly and https://github.com/jenkins-infra/docker-jenkins-lts
-set -ex
-
-current_dir="$(cd "$(dirname "$0")" && pwd -P)"
-
-echo "Updating plugins..."
-
-# Fetches the latest plugin manager version via API, the asset has a version number in it unfortunately
-# So we can't just use the API to get the latest version without some parsing
-PM_CLI_DOWNLOAD_URL=$(curl -s 'https://api.github.com/repos/jenkinsci/plugin-installation-manager-tool/releases/latest' | jq -r '.assets[] | select(.content_type=="application/java-archive").browser_download_url')
+set -exu -o pipefail
 
 TMP_DIR=$(mktemp -d)
+new_plugin_file="${TMP_DIR}/plugins-new.txt"
 
-wget --no-verbose "${PM_CLI_DOWNLOAD_URL}" -O "${TMP_DIR}/jenkins-plugin-manager.jar"
+{
+  current_dir="$(cd "$(dirname "$0")" && pwd -P)"
 
-jenkins_dockerdir="${current_dir}/../docker-image"
-CURRENT_JENKINS_VERSION="$(head -n 1 "${jenkins_dockerdir}/Dockerfile" | cut -d ':' -f 2 | cut -d '-' -f 1)"
-wget --no-verbose "https://get.jenkins.io/war-stable/${CURRENT_JENKINS_VERSION}/jenkins.war" -O "${TMP_DIR}/jenkins.war"
+  echo "Updating plugins..."
 
-cd "${jenkins_dockerdir}" || exit 1
+  # Fetches the latest plugin manager version via API, the asset has a version number in it unfortunately
+  # So we can't just use the API to get the latest version without some parsing
+  PM_CLI_DOWNLOAD_URL=$( \
+    curl --silent --show-error --location 'https://api.github.com/repos/jenkinsci/plugin-installation-manager-tool/releases/latest' \
+    | jq -r '.assets[] | select(.content_type=="application/x-java-archive").browser_download_url'\
+  )
 
-java -jar "${TMP_DIR}/jenkins-plugin-manager.jar" -f "${jenkins_dockerdir}/plugins.txt" --available-updates --output txt --war "${TMP_DIR}/jenkins.war" > "${jenkins_dockerdir}/plugins-new.txt"
+  TMP_DIR=$(mktemp -d)
 
-mv "${jenkins_dockerdir}/plugins-new.txt" "${jenkins_dockerdir}/plugins.txt"
+  curl --silent --show-error --location --output "${TMP_DIR}/jenkins-plugin-manager.jar" \
+    "${PM_CLI_DOWNLOAD_URL}"
 
-echo "Updating plugins complete"
+  jenkins_dockerdir="${current_dir}/../docker-image"
+  current_jenkins_version="$(grep 'ARG JENKINS_VERSION' "${jenkins_dockerdir}/Dockerfile" | cut -d'=' -f2)"
 
-rm -rf "${TMP_DIR}"
+  curl --silent --show-error --location --output "${TMP_DIR}/jenkins.war" \
+    "https://get.jenkins.io/war-stable/${current_jenkins_version}/jenkins.war"
+
+  cd "${jenkins_dockerdir}" || exit 1
+
+  java -jar "${TMP_DIR}/jenkins-plugin-manager.jar" -f "${jenkins_dockerdir}/plugins.txt" --available-updates --output txt --war "${TMP_DIR}/jenkins.war" > "${new_plugin_file}"
+
+  echo "Updating plugins complete. New plugin set available in ${new_plugin_file}"
+} >&2
+
+cat "${new_plugin_file}"

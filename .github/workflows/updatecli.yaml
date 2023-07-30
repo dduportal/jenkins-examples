@@ -1,0 +1,33 @@
+---
+name: Updatecli (Check for latest dependencies)
+
+on:
+  push:
+  # Run once a week (to avoid alert fatigue)
+  schedule:
+    - cron: '0 2 * * 1' # Every Monday at 2am UTC
+  # Allow to be run manually
+  workflow_dispatch:
+  # On each pull request
+  pull_request:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v3
+
+      - name: Install Updatecli in the runner
+        uses: updatecli/updatecli-action@v2.33.0
+
+      - name: Run Updatecli in Dry Run mode
+        run: updatecli diff --config ./updatecli/updatecli.d --values ./updatecli/values.github-action.yaml
+        env:
+          UPDATECLI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Updatecli in Apply mode
+        if: github.ref == 'refs/heads/main'
+        run: updatecli apply --config ./updatecli/updatecli.d --values ./updatecli/values.github-action.yaml
+        env:
+          UPDATECLI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

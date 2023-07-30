@@ -1,0 +1,42 @@
+---
+name: Bump Jenkins Plugin versions
+
+scms:
+  default:
+    kind: github
+    spec:
+      user: "{{ .github.user }}"
+      email: "{{ .github.email }}"
+      owner: "{{ .github.owner }}"
+      repository: "{{ .github.repository }}"
+      token: "{{ requiredEnv .github.token }}"
+      username: "{{ .github.username }}"
+      branch: "{{ .github.branch }}"
+
+sources:
+  getLatestPluginVersions:
+    name: "Get latest Jenkins plugin versions"
+    kind: shell
+    spec:
+      # Stdout of this command must only contains the NEW plugins.txt content
+      command: bash ./bin/update-plugins.sh
+      environments:
+        - name: PATH
+
+targets:
+  updatePlugins:
+    name: "Update Jenkins plugins"
+    kind: file
+    spec:
+      files:
+        - docker-image/plugins.txt
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    title: Bump Jenkins plugin versions
+    spec:
+      labels:
+        - dependencies
+        - jenkins-plugins
