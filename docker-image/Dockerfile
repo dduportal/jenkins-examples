@@ -1,4 +1,5 @@
-FROM jenkins/jenkins:2.401.2-jdk17
+ARG JENKINS_VERSION=2.401.2
+FROM jenkins/jenkins:${JENKINS_VERSION}-jdk17
 
 ## Disable the startup wizard
 RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
