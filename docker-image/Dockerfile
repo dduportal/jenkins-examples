@@ -1,4 +1,4 @@
-ARG JENKINS_VERSION=2.401.3
+ARG JENKINS_VERSION=2.414.1
 FROM jenkins/jenkins:${JENKINS_VERSION}-jdk17
 
 ## Disable the startup wizard
