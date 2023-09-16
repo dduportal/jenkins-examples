@@ -9,7 +9,7 @@ on:
   # On each pull request
   pull_request:
   # Manually
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   build:
