@@ -19,14 +19,14 @@ sources:
     name: Get the latest stable (LTS) Jenkins version
     spec:
       release: stable
+    transformers:
+      - addsuffix: '-jdk17'
 
 conditions:
   testDockerImageExists:
     name: "Does the Docker Image exist on the Docker Hub?"
     kind: dockerimage
     sourceid: latestVersion
-    transformers:
-      - addsuffix: '-jdk17'
     spec:
       image: "jenkins/jenkins"
       architectures:
@@ -40,8 +40,8 @@ targets:
     spec:
       file: docker-image/Dockerfile
       instruction:
-        keyword: "ARG"
-        matcher: "JENKINS_VERSION"
+        keyword: "FROM"
+        matcher: "jenkins/jenkins"
     scmid: default
 
 actions:
