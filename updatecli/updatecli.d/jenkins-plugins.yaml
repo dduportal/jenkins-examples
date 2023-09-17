@@ -30,6 +30,7 @@ targets:
     spec:
       files:
         - docker-image/plugins.txt
+    scmid: default
 
 actions:
   default:
