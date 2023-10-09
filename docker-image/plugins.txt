@@ -27,12 +27,12 @@ bootstrap4-api:4.6.0-6
 bouncycastle-api:2.29
 branch-api:2.1128.v717130d4f816
 checks-api:2.0.2
-cloudbees-bitbucket-branch-source:845.v27a_d5823911b_
+cloudbees-bitbucket-branch-source:848.v42c6a_317eda_e
 cloudbees-folder:6.848.ve3b_fd7839a_81
 command-launcher:107.v773860566e2e
 configuration-as-code:1714.v09593e830cfa
 credentials-binding:636.v55f1275c7b_27
-credentials:1271.v54b_1c2c6388a_
+credentials:1293.vff276f713473
 display-url-api:2.200.vb_9327d658781
 docker-commons:439.va_3cb_0a_6a_fb_29
 docker-workflow:572.v950f58993843
@@ -65,7 +65,7 @@ mercurial:1260.vdfb_723cdcc81
 metrics:4.2.18-442.v02e107157925
 node-iterator-api:49.v58a_8b_35f8363
 okhttp-api:4.11.0-157.v6852a_a_fa_ec11
-opentelemetry:2.16.0
+opentelemetry:2.17.0
 pipeline-build-step:505.v5f0844d8d126
 pipeline-graph-analysis:202.va_d268e64deb_3
 pipeline-groovy-lib:689.veec561a_dee13
@@ -97,7 +97,7 @@ variant:60.v7290fc0eb_b_cd
 warnings-ng:10.4.0
 workflow-api:1283.v99c10937efcb_
 workflow-basic-steps:1042.ve7b_140c4a_e0c
-workflow-cps:3793.v65dec41c3a_c3
+workflow-cps:3802.vd42b_fcf00b_a_c
 workflow-durable-task-step:1289.v4d3e7b_01546b_
 workflow-job:1348.v32a_a_f150910e
 workflow-multibranch:756.v891d88f2cd46
