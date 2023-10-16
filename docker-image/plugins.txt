@@ -48,7 +48,7 @@ github-branch-source:1741.va_3028eb_9fd21
 github:1.37.3
 handy-uri-templates-2-api:2.1.8-22.v77d5b_75e6953
 htmlpublisher:1.32
-jackson2-api:2.15.2-350.v0c2f3f8fc595
+jackson2-api:2.15.3-363.v82c51b_de9f60
 jdk-tool:73.vddf737284550
 jenkins-design-language:1.27.8
 jira:3.11
