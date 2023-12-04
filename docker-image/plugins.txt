@@ -30,7 +30,7 @@ checks-api:2.0.2
 cloudbees-bitbucket-branch-source:856.v04c46c86f911
 cloudbees-folder:6.858.v898218f3609d
 command-launcher:107.v773860566e2e
-configuration-as-code:1746.vf1673cfe690a
+configuration-as-code:1752.v0ccc3b_6064b_0
 credentials-binding:642.v737c34dea_6c2
 credentials:1309.v8835d63eb_d8a_
 display-url-api:2.200.vb_9327d658781
