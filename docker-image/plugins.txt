@@ -80,7 +80,7 @@ pipeline-stage-view:2.34
 plain-credentials:143.v1b_df8b_d3b_e48
 plugin-util-api:3.8.0
 popper-api:1.16.1-3
-prometheus:2.4.1
+prometheus:2.4.2
 pubsub-light:1.18
 scm-api:683.vb_16722fb_b_80b_
 script-security:1294.v99333c047434
