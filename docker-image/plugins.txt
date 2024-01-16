@@ -26,7 +26,7 @@ blueocean:1.27.9
 bouncycastle-api:2.30.1.77-225.v26ea_c9455fd9
 branch-api:2.1144.v1425d1c3d5a_7
 checks-api:2.0.2
-cloudbees-bitbucket-branch-source:856.v04c46c86f911
+cloudbees-bitbucket-branch-source:866.vdea_7dcd3008e
 cloudbees-folder:6.858.v898218f3609d
 command-launcher:107.v773860566e2e
 configuration-as-code:1763.vb_fe9c1b_83f7b
@@ -55,7 +55,7 @@ jjwt-api:0.11.5-77.v646c772fddb_0
 job-dsl:1.87
 jquery3-api:3.7.1-1
 jsch:0.2.16-86.v42e010d9484b_
-junit:1252.vfc2e5efa_294f
+junit:1256.v002534a_5f33e
 kubernetes:4174.v4230d0ccd951
 lockable-resources:1228.v1b_2379444670
 mailer:463.vedf8358e006b_
@@ -87,7 +87,7 @@ script-security:1313.v7a_6067dc7087
 snakeyaml-api:2.2-111.vc6598e30cc65
 sse-gateway:1.26
 ssh-credentials:308.ve4497b_ccd8f4
-ssh-slaves:2.947.v64ee6b_f87b_c1
+ssh-slaves:2.948.vb_8050d697fec
 structs:325.vcb_307d2a_2782
 timestamper:1.26
 token-macro:400.v35420b_922dcb_
