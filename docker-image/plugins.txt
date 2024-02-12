@@ -26,7 +26,7 @@ blueocean:1.27.10
 bouncycastle-api:2.30.1.77-225.v26ea_c9455fd9
 branch-api:2.1144.v1425d1c3d5a_7
 checks-api:2.0.2
-cloudbees-bitbucket-branch-source:866.vdea_7dcd3008e
+cloudbees-bitbucket-branch-source:871.v28d74e8b_4226
 cloudbees-folder:6.858.v898218f3609d
 command-launcher:107.v773860566e2e
 configuration-as-code:1775.v810dc950b_514
@@ -35,7 +35,7 @@ credentials:1319.v7eb_51b_3a_c97b_
 display-url-api:2.200.vb_9327d658781
 docker-commons:439.va_3cb_0a_6a_fb_29
 docker-workflow:572.v950f58993843
-durable-task:547.vd1ea_007d100c
+durable-task:550.v0930093c4b_a_6
 echarts-api:5.4.3-2
 favorite:2.208.v91d65b_7792a_c
 font-awesome-api:6.5.1-2
@@ -97,7 +97,7 @@ warnings-ng:10.7.0
 workflow-api:1291.v51fd2a_625da_7
 workflow-basic-steps:1042.ve7b_140c4a_e0c
 workflow-cps:3853.vb_a_490d892963
-workflow-durable-task-step:1327.ve57634fb_09ce
+workflow-durable-task-step:1331.vc8c2fed35334
 workflow-job:1385.vb_58b_86ea_fff1
 workflow-multibranch:773.vc4fe1378f1d5
 workflow-scm-step:415.v434365564324
