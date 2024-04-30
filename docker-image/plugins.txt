@@ -30,9 +30,9 @@ cloudbees-bitbucket-branch-source:883.v041fa_695e9c2
 cloudbees-folder:6.901.vb_4c7a_da_75da_3
 command-launcher:107.v773860566e2e
 configuration-as-code:1775.v810dc950b_514
-credentials-binding:657.v2b_19db_7d6e6d
+credentials-binding:677.vdc9d38cb_254d
 credentials:1337.v60b_d7b_c7b_c9f
-display-url-api:2.200.vb_9327d658781
+display-url-api:2.204.vf6fddd8a_8b_e9
 docker-commons:439.va_3cb_0a_6a_fb_29
 docker-workflow:572.v950f58993843
 durable-task:555.v6802fe0f0b_82
@@ -56,7 +56,7 @@ job-dsl:1.87
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
 junit:1265.v65b_14fa_f12f0
-kubernetes:4203.v1dd44f5b_1cf9
+kubernetes:4208.v4017b_a_27a_d67
 lockable-resources:1255.vf48745da_35d0
 mailer:472.vf7c289a_4b_420
 matrix-project:822.824.v14451b_c0fd42
