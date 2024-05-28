@@ -27,7 +27,7 @@ bouncycastle-api:2.30.1.77-225.v26ea_c9455fd9
 branch-api:2.1169.va_f810c56e895
 checks-api:2.2.0
 cloudbees-bitbucket-branch-source:886.v44cf5e4ecec5
-cloudbees-folder:6.901.vb_4c7a_da_75da_3
+cloudbees-folder:6.928.v7c780211d66e
 command-launcher:107.v773860566e2e
 configuration-as-code:1810.v9b_c30a_249a_4c
 credentials-binding:677.vdc9d38cb_254d
@@ -46,7 +46,7 @@ github-api:1.318-461.v7a_c09c9fa_d63
 github-branch-source:1789.v5b_0c0cea_18c3
 github:1.39.0
 handy-uri-templates-2-api:2.1.8-30.v7e777411b_148
-htmlpublisher:1.33
+htmlpublisher:1.34
 jackson2-api:2.17.0-379.v02de8ec9f64c
 jdk-tool:73.vddf737284550
 jenkins-design-language:1.27.12
@@ -56,7 +56,7 @@ job-dsl:1.87
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
 junit:1265.v65b_14fa_f12f0
-kubernetes:4233.vb_67a_0e11a_039
+kubernetes:4234.vdf3e78112369
 lockable-resources:1255.vf48745da_35d0
 mailer:472.vf7c289a_4b_420
 matrix-project:830.v7ea_da_561b_a_34
@@ -87,7 +87,7 @@ script-security:1336.vf33a_a_9863911
 snakeyaml-api:2.2-111.vc6598e30cc65
 sse-gateway:1.26
 ssh-credentials:337.v395d2403ccd4
-ssh-slaves:2.948.vb_8050d697fec
+ssh-slaves:2.966.vea_5112da_0a_a_1
 structs:337.v1b_04ea_4df7c8
 timestamper:1.27
 token-macro:400.v35420b_922dcb_
@@ -99,7 +99,7 @@ workflow-basic-steps:1058.vcb_fc1e3a_21a_9
 workflow-cps:3894.3896.vca_2c931e7935
 workflow-durable-task-step:1353.v1891a_b_01da_18
 workflow-job:1400.v7fd111b_ec82f
-workflow-multibranch:773.vc4fe1378f1d5
+workflow-multibranch:783.va_6eb_ef636fb_d
 workflow-scm-step:427.v4ca_6512e7df1
 workflow-step-api:657.v03b_e8115821b_
 workflow-support:907.v6713a_ed8a_573
