@@ -42,7 +42,7 @@ font-awesome-api:6.5.2-1
 git-client:5.0.0
 git-server:126.v0d945d8d2b_39
 git:5.2.2
-github-api:1.318-461.v7a_c09c9fa_d63
+github-api:1.321-468.v6a_9f5f2d5a_7e
 github-branch-source:1790.v5a_7859812c8d
 github:1.39.0
 handy-uri-templates-2-api:2.1.8-30.v7e777411b_148
@@ -80,13 +80,13 @@ pipeline-stage-view:2.34
 plain-credentials:183.va_de8f1dd5a_2b_
 plugin-util-api:4.1.0
 popper-api:1.16.1-3
-prometheus:778.ve1c932a_ff24f
+prometheus:780.v7c50a_d288424
 pubsub-light:1.18
-scm-api:690.vfc8b_54395023
+scm-api:696.v778d637b_a_762
 script-security:1341.va_2819b_414686
 snakeyaml-api:2.2-111.vc6598e30cc65
 sse-gateway:1.27
-ssh-credentials:342.ve5a_f1db_5a_132
+ssh-credentials:343.v884f71d78167
 ssh-slaves:2.973.v0fa_8c0dea_f9f
 structs:338.v848422169819
 timestamper:1.27
