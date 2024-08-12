@@ -27,7 +27,7 @@ bouncycastle-api:2.30.1.78.1-248.ve27176eb_46cb_
 branch-api:2.1178.v969d9eb_c728e
 checks-api:2.2.0
 cloudbees-bitbucket-branch-source:888.v8e6d479a_1730
-cloudbees-folder:6.928.v7c780211d66e
+cloudbees-folder:6.942.vb_43318a_156b_2
 command-launcher:115.vd8b_301cc15d0
 configuration-as-code:1836.vccda_4a_122a_a_e
 credentials-binding:681.vf91669a_32e45
@@ -98,8 +98,8 @@ workflow-api:1332.vc21122317a_8e
 workflow-basic-steps:1058.vcb_fc1e3a_21a_9
 workflow-cps:3922.va_f73b_7c4246b_
 workflow-durable-task-step:1364.v2fd76fb_6fd41
-workflow-job:1400.v7fd111b_ec82f
-workflow-multibranch:783.787.v50539468395f
+workflow-job:1436.vfa_244484591f
+workflow-multibranch:795.ve0cb_1f45ca_9a_
 workflow-scm-step:427.v4ca_6512e7df1
 workflow-step-api:678.v3ee58b_469476
 workflow-support:920.v59f71ce16f04
