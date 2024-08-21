@@ -43,7 +43,7 @@ git-client:5.0.0
 git-server:126.v0d945d8d2b_39
 git:5.3.0
 github-api:1.321-468.v6a_9f5f2d5a_7e
-github-branch-source:1793.v1831e9c68d77
+github-branch-source:1797.v86fdb_4d57d43
 github:1.40.0
 handy-uri-templates-2-api:2.1.8-30.v7e777411b_148
 htmlpublisher:1.36
@@ -55,7 +55,7 @@ jjwt-api:0.11.5-112.ve82dfb_224b_a_d
 job-dsl:1.87
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
-junit:1284.vf75d778f98c5
+junit:1291.v60776881903c
 kubernetes:4285.v50ed5f624918
 lockable-resources:1255.vf48745da_35d0
 mailer:472.vf7c289a_4b_420
