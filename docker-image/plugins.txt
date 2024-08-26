@@ -41,7 +41,7 @@ favorite:2.221.v19ca_666b_62f5
 font-awesome-api:6.6.0-1
 git-client:5.0.0
 git-server:126.v0d945d8d2b_39
-git:5.3.0
+git:5.4.0
 github-api:1.321-468.v6a_9f5f2d5a_7e
 github-branch-source:1797.v86fdb_4d57d43
 github:1.40.0
@@ -55,7 +55,7 @@ jjwt-api:0.11.5-112.ve82dfb_224b_a_d
 job-dsl:1.87
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
-junit:1291.v60776881903c
+junit:1296.vb_f538b_c88630
 kubernetes:4285.v50ed5f624918
 lockable-resources:1255.vf48745da_35d0
 mailer:472.vf7c289a_4b_420
@@ -80,7 +80,7 @@ pipeline-stage-view:2.34
 plain-credentials:183.va_de8f1dd5a_2b_
 plugin-util-api:4.1.0
 popper-api:1.16.1-3
-prometheus:780.v7c50a_d288424
+prometheus:784.vea_eca_f6592eb_
 pubsub-light:1.18
 scm-api:696.v778d637b_a_762
 script-security:1354.va_70a_fe478c7f
@@ -97,7 +97,7 @@ warnings-ng:11.4.1
 workflow-api:1336.vee415d95c521
 workflow-basic-steps:1058.vcb_fc1e3a_21a_9
 workflow-cps:3943.v3519a_3260660
-workflow-durable-task-step:1364.v2fd76fb_6fd41
+workflow-durable-task-step:1371.vb_7cec8f3b_95e
 workflow-job:1436.vfa_244484591f
 workflow-multibranch:795.ve0cb_1f45ca_9a_
 workflow-scm-step:427.v4ca_6512e7df1
