@@ -33,7 +33,7 @@ configuration-as-code:1887.v9e47623cb_043
 credentials-binding:687.v619cb_15e923f
 credentials:1389.vd7a_b_f5fa_50a_2
 display-url-api:2.209.v582ed814ff2f
-docker-commons:443.v921729d5611d
+docker-commons:445.v6b_646c962a_94
 docker-workflow:580.vc0c340686b_54
 durable-task:577.v2a_8a_4b_7c0247
 echarts-api:5.5.1-4
@@ -55,7 +55,7 @@ jjwt-api:0.11.5-112.ve82dfb_224b_a_d
 job-dsl:1.90
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
-junit:1307.vdd5b_2646279e
+junit:1309.v0078b_fecd6ed
 kubernetes:4296.v20a_7e4d77cf6
 lockable-resources:1327.ved786b_a_197e0
 mailer:489.vd4b_25144138f
@@ -97,8 +97,8 @@ warnings-ng:11.10.0
 workflow-api:1336.vee415d95c521
 workflow-basic-steps:1058.vcb_fc1e3a_21a_9
 workflow-cps:3990.vd281dd77a_388
-workflow-durable-task-step:1371.vb_7cec8f3b_95e
-workflow-job:1460.v28178c1ef6e6
+workflow-durable-task-step:1378.v6a_3e903058a_3
+workflow-job:1468.vcf4f5ee92395
 workflow-multibranch:795.ve0cb_1f45ca_9a_
 workflow-scm-step:427.v4ca_6512e7df1
 workflow-step-api:678.v3ee58b_469476
