@@ -29,7 +29,7 @@ checks-api:2.2.1
 cloudbees-bitbucket-branch-source:922.va_71d0e0b_7b_8d
 cloudbees-folder:6.959.v4ed5cc9e2dd4
 command-launcher:116.vd85919c54a_d6
-configuration-as-code:1897.v79281e066ea_7
+configuration-as-code:1903.v004d55388f30
 credentials-binding:687.v619cb_15e923f
 credentials:1389.vd7a_b_f5fa_50a_2
 display-url-api:2.209.v582ed814ff2f
@@ -56,7 +56,7 @@ job-dsl:1.90
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
 junit:1309.v0078b_fecd6ed
-kubernetes:4296.v20a_7e4d77cf6
+kubernetes:4300.vd82c5692b_3a_e
 lockable-resources:1327.ved786b_a_197e0
 mailer:489.vd4b_25144138f
 matrix-project:840.v812f627cb_578
@@ -96,9 +96,9 @@ variant:60.v7290fc0eb_b_cd
 warnings-ng:11.12.0
 workflow-api:1336.vee415d95c521
 workflow-basic-steps:1058.vcb_fc1e3a_21a_9
-workflow-cps:3996.va_f5c1799f978
+workflow-cps:4000.v5198556e9cea_
 workflow-durable-task-step:1398.vf6c9e89e5988
-workflow-job:1468.vcf4f5ee92395
+workflow-job:1472.ve4d5eca_143c4
 workflow-multibranch:795.ve0cb_1f45ca_9a_
 workflow-scm-step:427.v4ca_6512e7df1
 workflow-step-api:678.v3ee58b_469476
