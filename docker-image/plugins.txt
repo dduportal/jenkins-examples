@@ -26,8 +26,8 @@ blueocean:1.27.16
 bouncycastle-api:2.30.1.78.1-248.ve27176eb_46cb_
 branch-api:2.1200.v4b_a_3da_2eb_db_4
 checks-api:2.2.1
-cloudbees-bitbucket-branch-source:922.va_71d0e0b_7b_8d
-cloudbees-folder:6.959.v4ed5cc9e2dd4
+cloudbees-bitbucket-branch-source:933.v7119e94e8f56
+cloudbees-folder:6.963.v6edc0fc71472
 command-launcher:116.vd85919c54a_d6
 configuration-as-code:1903.v004d55388f30
 credentials-binding:687.v619cb_15e923f
@@ -55,8 +55,8 @@ jjwt-api:0.11.5-112.ve82dfb_224b_a_d
 job-dsl:1.90
 jquery3-api:3.7.1-2
 jsch:0.2.16-86.v42e010d9484b_
-junit:1309.v0078b_fecd6ed
-kubernetes:4300.vd82c5692b_3a_e
+junit:1311.v39e1716e4eb_e
+kubernetes:4302.va_756e4b_67715
 lockable-resources:1327.ved786b_a_197e0
 mailer:489.vd4b_25144138f
 matrix-project:840.v812f627cb_578
@@ -80,7 +80,7 @@ pipeline-stage-view:2.34
 plain-credentials:183.va_de8f1dd5a_2b_
 plugin-util-api:5.1.0
 popper-api:1.16.1-3
-prometheus:795.v995762102f28
+prometheus:801.v98e119d8eeda_
 pubsub-light:1.18
 scm-api:698.v8e3b_c788f0a_6
 script-security:1369.v9b_98a_4e95b_2d
