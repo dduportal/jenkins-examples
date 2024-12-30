@@ -26,7 +26,7 @@ blueocean:1.27.16
 bouncycastle-api:2.30.1.78.1-248.ve27176eb_46cb_
 branch-api:2.1202.vc51412f3ed84
 checks-api:2.2.1
-cloudbees-bitbucket-branch-source:933.0.2
+cloudbees-bitbucket-branch-source:933.1.0
 cloudbees-folder:6.975.v4161e479479f
 command-launcher:116.vd85919c54a_d6
 configuration-as-code:1909.vb_b_f59a_27d013
@@ -36,7 +36,7 @@ display-url-api:2.209.v582ed814ff2f
 docker-commons:445.v6b_646c962a_94
 docker-workflow:580.vc0c340686b_54
 durable-task:581.v299a_5609d767
-echarts-api:5.5.1-4
+echarts-api:5.5.1-5
 favorite:2.221.v19ca_666b_62f5
 font-awesome-api:6.6.0-2
 git-client:6.1.0
