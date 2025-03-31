@@ -42,9 +42,9 @@ font-awesome-api:6.7.2-1
 git-client:6.1.2
 git-server:137.ve0060b_432302
 git:5.7.0
-github-api:1.321-486.vd7fa_ef919b_48
+github-api:1.321-488.v9b_c0da_9533f8
 github-branch-source:1815.v9152b_2ff7a_1b_
-github:1.42.0
+github:1.43.0
 handy-uri-templates-2-api:2.1.8-36.v85e4cb_234a_13
 htmlpublisher:425
 jackson2-api:2.18.3-402.v74c4eb_f122b_2
@@ -63,7 +63,7 @@ matrix-project:847.v88a_f90ff9f20
 mercurial:1309.v6802b_f0efb_b_9
 metrics:4.2.21-464.vc9fa_a_0d6265d
 node-iterator-api:72.vc90e81737df1
-okhttp-api:4.11.0-183.va_87fc7a_89810
+okhttp-api:4.11.0-189.v976fa_d3379d6
 opentelemetry:3.1495.v64dcff5b_7a_6c
 pipeline-build-step:557.v95d96f77b_2b_8
 pipeline-graph-analysis:235.vb_a_a_36b_f248c2
