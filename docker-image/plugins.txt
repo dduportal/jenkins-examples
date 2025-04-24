@@ -5,7 +5,6 @@ basic-branch-build-strategies:228.v68c089762a_db_
 bouncycastle-api:2.30.1.80-256.vf98926042a_9b_
 branch-api:2.1217.v43d8b_b_d8b_2c7
 checks-api:370.vb_61a_c57328f3
-cloudbees-bitbucket-branch-source:936.0.1
 cloudbees-folder:6.1012.v79a_86a_1ea_c1f
 command-launcher:123.v37cfdc92ef67
 configuration-as-code:1958.vddc0d369b_e16
