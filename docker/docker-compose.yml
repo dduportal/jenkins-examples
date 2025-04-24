@@ -13,7 +13,7 @@ services:
     ports:
       - 8080:8080 # WebUI
   jenkins-agent:
-    image: jenkins/ssh-agent:jdk11
+    image: jenkins/ssh-agent:jdk21
     environment:
       # This is a public key. The associated private key must be mounted in the Jenkins controller container.
       - "JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORe0Mi78bQ+8G3pVS4pv5VDilqHVNIhfj+UxvVD100c noone@localhost.local"
