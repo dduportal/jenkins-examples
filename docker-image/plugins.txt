@@ -24,7 +24,7 @@ kubernetes:4324.vfec199a_33512
 lockable-resources:1349.v8b_ccb_c5487f7
 matrix-project:849.v0cd64ed7e531
 metrics:4.2.30-471.v55fa_495f2b_f5
-opentelemetry:3.1523.v0b_3ce640987d
+opentelemetry:3.1525.v604f3b_1a_e07b_
 pipeline-build-step:567.vea_ce550ece97
 pipeline-graph-analysis:235.vb_a_a_36b_f248c2
 pipeline-graph-view:504.vb_643f0e2e9c0
