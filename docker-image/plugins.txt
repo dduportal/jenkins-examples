@@ -3,7 +3,7 @@ authentication-tokens:1.131.v7199556c3004
 basic-branch-build-strategies:228.v68c089762a_db_
 bouncycastle-api:2.30.1.80-261.v00c0e2618ec3
 branch-api:2.1217.v43d8b_b_d8b_2c7
-checks-api:370.vb_61a_c57328f3
+checks-api:373.vfe7645102093
 cloudbees-folder:6.1023.v4fcb_72152519
 command-launcher:123.v37cfdc92ef67
 configuration-as-code:1971.vf9280461ea_89
