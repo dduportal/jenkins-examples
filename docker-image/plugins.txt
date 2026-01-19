@@ -6,7 +6,7 @@ branch-api:2.1268.v044a_87612da_8
 checks-api:402.vca_263b_f200e3
 cloudbees-folder:6.1073.va_7888eb_dd514
 command-launcher:123.v37cfdc92ef67
-configuration-as-code:2006.v001a_2ca_6b_574
+configuration-as-code:2031.veb_a_fdda_b_3ffd
 credentials-binding:702.vfe613e537e88
 credentials:1480.v2246fd131e83
 docker-commons:457.v0f62a_94f11a_3
@@ -25,7 +25,7 @@ lockable-resources:1438.v3c0f8c9e2060
 matrix-project:870.v9db_fcfc2f45b_
 metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1573.v72f1a_711ca_98
-pipeline-build-step:571.v08a_fffd4b_0ce
+pipeline-build-step:584.vdb_a_2cc3a_d07a_
 pipeline-graph-analysis:245.v88f03631a_b_21
 pipeline-graph-view:661.v6003f4542123
 pipeline-groovy-lib:787.ve2fef0efdca_6
