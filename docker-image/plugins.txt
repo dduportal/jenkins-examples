@@ -8,7 +8,7 @@ cloudbees-folder:6.1079.vc0975c2de294
 command-launcher:123.v37cfdc92ef67
 configuration-as-code:2037.v8e5349845172
 credentials-binding:717.v951d49b_5f3a_a_
-credentials:1488.v9049e8c8b_d98
+credentials:1489.v375944c125ee
 docker-commons:457.v0f62a_94f11a_3
 docker-workflow:634.vedc7242b_eda_7
 durable-task:651.v1f5e074fc83f
@@ -42,7 +42,7 @@ prometheus:852.v317db_5d17a_b_0
 scm-api:728.vc30dcf7a_0df5
 script-security:1399.ve6a_66547f6e1
 ssh-credentials:361.vb_f6760818e8c
-ssh-slaves:3.1096.v0b_cc466e4323
+ssh-slaves:3.1097.v868116049892
 timestamper:1.30
 warnings-ng:12.10012.v753ff0d0363a_
 workflow-api:1398.v67030756d3fb_
