@@ -19,7 +19,7 @@ github:1.46.0
 htmlpublisher:427
 jdk-tool:83.v417146707a_3d
 job-dsl:3654.vdf58f53e2d15
-junit:1396.v095840ed8491
+junit:1402.va_87fd3d15dc3
 kubernetes:4423.vb_59f230b_ce53
 lockable-resources:1438.v3c0f8c9e2060
 matrix-project:870.v9db_fcfc2f45b_
