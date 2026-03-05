@@ -11,7 +11,7 @@ credentials-binding:717.v951d49b_5f3a_a_
 credentials:1491.v6d6145e96e1c
 docker-commons:457.v0f62a_94f11a_3
 docker-workflow:634.vedc7242b_eda_7
-durable-task:651.v1f5e074fc83f
+durable-task:664.v2b_e7a_dfff66c
 git:5.10.0
 github-api:1.330-492.v3941a_032db_2a_
 github-branch-source:1967.vdea_d580c1a_b_a_
@@ -21,13 +21,13 @@ jdk-tool:83.v417146707a_3d
 job-dsl:3654.vdf58f53e2d15
 junit:1402.va_87fd3d15dc3
 kubernetes:4423.vb_59f230b_ce53
-lockable-resources:1438.v3c0f8c9e2060
+lockable-resources:1469.v52dff5a_80e32
 matrix-project:870.v9db_fcfc2f45b_
 metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1584.v4f6307b_3766f
 pipeline-build-step:584.vdb_a_2cc3a_d07a_
 pipeline-graph-analysis:254.v0f63a_a_447dca_
-pipeline-graph-view:777.vdeb_113b_b_94da_
+pipeline-graph-view:803.vb_88f7a_a_1cb_47
 pipeline-groovy-lib:787.ve2fef0efdca_6
 pipeline-input-step:540.v14b_100d754dd
 pipeline-milestone-step:138.v78ca_76831a_43
