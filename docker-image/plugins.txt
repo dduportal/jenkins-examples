@@ -6,10 +6,10 @@ branch-api:2.1280.v0d4e5b_b_460ef
 checks-api:402.vca_263b_f200e3
 cloudbees-folder:6.1079.vc0975c2de294
 command-launcher:123.v37cfdc92ef67
-configuration-as-code:2056.v6a_e126e16620
+configuration-as-code:2061.vc08919f7fc37
 credentials-binding:719.v80e905ef14eb_
 credentials:1499.va_f0e811253a_6
-docker-commons:457.v0f62a_94f11a_3
+docker-commons:472.vee120e23d3a_c
 docker-workflow:634.vedc7242b_eda_7
 durable-task:664.v2b_e7a_dfff66c
 git:5.10.1
@@ -21,7 +21,7 @@ jdk-tool:83.v417146707a_3d
 job-dsl:3654.vdf58f53e2d15
 junit:1403.vd9d1413fd205
 kubernetes:4423.vb_59f230b_ce53
-lockable-resources:1469.v52dff5a_80e32
+lockable-resources:1489.v7228e15c55a_8
 matrix-project:870.v9db_fcfc2f45b_
 metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1589.ve81b_b_fa_927d5
@@ -47,7 +47,7 @@ timestamper:1.30
 warnings-ng:12.10012.v753ff0d0363a_
 workflow-api:1398.v67030756d3fb_
 workflow-basic-steps:1098.v808b_fd7f8cf4
-workflow-cps:4263.vd2edf31c1db_0
+workflow-cps:4275.vb_0565eb_a_3d36
 workflow-durable-task-step:1464.v2d3f5c68f84c
 workflow-job:1571.vb_423c255d6d9
 workflow-multibranch:821.vc3b_4ea_780798
