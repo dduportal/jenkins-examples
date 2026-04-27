@@ -21,7 +21,7 @@ jdk-tool:83.v417146707a_3d
 job-dsl:3654.vdf58f53e2d15
 junit:1403.vd9d1413fd205
 kubernetes:4423.vb_59f230b_ce53
-lockable-resources:1509.va_6b_5b_5cb_0b_40
+lockable-resources:1515.v380548282a_59
 matrix-project:870.v9db_fcfc2f45b_
 metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1589.ve81b_b_fa_927d5
