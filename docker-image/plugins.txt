@@ -27,7 +27,7 @@ metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1589.ve81b_b_fa_927d5
 pipeline-build-step:584.vdb_a_2cc3a_d07a_
 pipeline-graph-analysis:254.v0f63a_a_447dca_
-pipeline-graph-view:933.v8cd3789f1b_dd
+pipeline-graph-view:940.v790e7a_c51722
 pipeline-groovy-lib:798.v5cc688825312
 pipeline-input-step:551.vdff487c5998c
 pipeline-milestone-step:152.v6e22b_8cfc66c
