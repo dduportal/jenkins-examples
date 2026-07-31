@@ -10,7 +10,7 @@ configuration-as-code:2108.v02b_430db_0cf5
 credentials-binding:728.v902a_273b_8947
 credentials:1506.v948b_b_b_7dec44
 docker-commons:477.v289085a_b_6896
-docker-workflow:634.vedc7242b_eda_7
+docker-workflow:647.vf474049b_b_303
 durable-task:686.v80ff80875b_82
 git:5.10.1
 github-api:1.330-492.v3941a_032db_2a_
@@ -47,7 +47,7 @@ timestamper:1.30
 warnings-ng:13.10153.v011f47a_3ef01
 workflow-api:1413.v2ff1a_5e720fa_
 workflow-basic-steps:1098.v808b_fd7f8cf4
-workflow-cps:4357.vd3195c6b_d381
+workflow-cps:4360.v2020e8819a_d6
 workflow-durable-task-step:1479.v56e587f413a_7
 workflow-job:1590.v49101d088542
 workflow-multibranch:841.vec5b_9e1806ec
