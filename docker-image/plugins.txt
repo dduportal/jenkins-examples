@@ -19,12 +19,12 @@ github:1.47.0
 htmlpublisher:429
 jdk-tool:83.v417146707a_3d
 job-dsl:3732.v9a_c49a_61a_313
-junit:1418.v67a_81935603c
+junit:1424.vc64a_edde7777
 kubernetes:4547.v52f3080db_8cd
 lockable-resources:1539.v4db_b_fc1cc115
-matrix-project:905.vcc6831e8760a_
+matrix-project:917.v22eda_817646e
 metrics:4.2.37-494.v06f9a_939d33a_
-opentelemetry:3.1593.v559d9e39a_519
+opentelemetry:3.1594.v46b_eb_e48175a_
 pipeline-build-step:599.v4b_67ea_11b_152
 pipeline-graph-analysis:254.v0f63a_a_447dca_
 pipeline-graph-view:998.vc30deece0e36
@@ -47,7 +47,7 @@ timestamper:1.30
 warnings-ng:13.10223.v8f61dc07f2df
 workflow-api:1413.v2ff1a_5e720fa_
 workflow-basic-steps:1098.v808b_fd7f8cf4
-workflow-cps:4362.v9b_991749898e
+workflow-cps:4370.v49a_6937566b_6
 workflow-durable-task-step:1479.v56e587f413a_7
 workflow-job:1590.v49101d088542
 workflow-multibranch:841.vec5b_9e1806ec
