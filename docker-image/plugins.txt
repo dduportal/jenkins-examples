@@ -21,7 +21,7 @@ jdk-tool:83.v417146707a_3d
 job-dsl:3732.v9a_c49a_61a_313
 junit:1425.v9c7318dca_96d
 kubernetes:4547.v52f3080db_8cd
-lockable-resources:1554.v491fcb_27c716
+lockable-resources:1560.va_b_cd589f23eb_
 matrix-project:917.v22eda_817646e
 metrics:4.2.37-494.v06f9a_939d33a_
 opentelemetry:3.1599.v6f67e4a_b_1d15
@@ -47,7 +47,7 @@ timestamper:1.30
 warnings-ng:13.10258.va_17d49a_78c3b_
 workflow-api:1413.v2ff1a_5e720fa_
 workflow-basic-steps:1098.v808b_fd7f8cf4
-workflow-cps:4376.v30c8c00684a_3
+workflow-cps:4378.v7a_08f1b_b_f8f4
 workflow-durable-task-step:1479.v56e587f413a_7
 workflow-job:1600.v6f36ed83529d
 workflow-multibranch:841.vec5b_9e1806ec
